@@ -1,6 +1,7 @@
 package anna.z.sampleclients;
 
 import anna.z.AbstractAlgorithm;
+import anna.z.Constants;
 import com.google.caliper.Benchmark;
 import com.google.caliper.Param;
 import com.google.caliper.runner.CaliperMain;
@@ -13,10 +14,10 @@ import java.util.Random;
 public class BubbleClient {
 
     public static void main(String... args) throws InterruptedException {
-        CaliperMain.main(BubbleSort.class, args);
+        CaliperMain.main(BubbleSort.class, Constants.DEFAULT_ARGS);
     }
 
-    public static class BubbleSort implements AbstractAlgorithm {
+    private static class BubbleSort implements AbstractAlgorithm {
 
         private static final Logger LOG = LoggerFactory.getLogger(BubbleSort.class);
 
