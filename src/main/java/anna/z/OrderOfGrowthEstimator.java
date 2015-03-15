@@ -19,14 +19,12 @@ import static org.la4j.LinearAlgebra.LEAST_SQUARES;
 public class OrderOfGrowthEstimator {
 
     private static final Logger LOG = LoggerFactory.getLogger(OrderOfGrowthEstimator.class);
-    private static final int MIN_ITERATIONS = 4;
-    private static final int LEAST_ITERATIONS = 10;
+    private static final int LEAST_ITERATIONS = 4;
 
     public Oh estimate(SortedMap<Integer, Double> timings) {
         int timingsQuantity = timings.size();
-        if (timingsQuantity < MIN_ITERATIONS) {
-            LOG.error("Refusing to estimate {} timings, at least {} required!",
-                    timingsQuantity, LEAST_ITERATIONS);
+        if (timingsQuantity < LEAST_ITERATIONS) {
+            LOG.error("Refusing to estimate {} timings, at least {} required!", timingsQuantity, LEAST_ITERATIONS);
             System.exit(1);
         }
 

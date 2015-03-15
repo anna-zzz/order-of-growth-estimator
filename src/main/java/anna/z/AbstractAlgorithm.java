@@ -2,5 +2,5 @@ package anna.z;
 
 public interface AbstractAlgorithm {
 
-    public void run(int N);
+    public void timeRun() throws InterruptedException;
 }

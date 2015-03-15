@@ -1,12 +1,8 @@
 Order of growth estimator
 =========================
 
-A funny thing I wrote during Coursera algorithms course. Supposed to be capable of estimating complexity of the algorithm.
+A funny thing I wrote during [Coursera algorithms course](https://www.coursera.org/course/algs4partI). Somewhat capable of estimating complexity of the algorithm.
 
-*Theoretically*, it does so. However, this is the result I got after running the thing on a real algorithm implementation:
+The first naive approach was purely pathetic — I tried measuring running time with manual timestampes and failed miserably -) JVM is smart enough with all the JITs and caches.
 
-![the graph](http://i.imgur.com/U9sn4TN.png) 
-
-Looks weird... This due to JVM being smarter then me and optimizing everything with caches and JIT and stuff.
-
-I probably should try [caliper](https://code.google.com/p/caliper/).
+Project currently uses [Caliper](https://code.google.com/p/caliper/) — a Java microbenchmarking tool. So far so good, at least bubble sort reports to run at quadratic complexity -)
