@@ -15,7 +15,7 @@ public final class Constants {
         // Measure only execution time
         defaultArgs[1] = "--instrument=runtime";
         // Default values for N
-        defaultArgs[2] = "-DN=10,20,40,80";
+        defaultArgs[2] = "-DN=1,2,4,8,16";
         return defaultArgs;
     }
 }
